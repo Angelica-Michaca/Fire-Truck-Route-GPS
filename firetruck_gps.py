@@ -13,7 +13,7 @@ class Graph:
     def uniform_cost_search(self, start, goal):
         priority_queue = [(0, start, [])]  # (cost, node, path)
         visited = set()
-        allow_one_way = ("Fire Station", "D") in self.traffic  # 🚨 Allow A → G only if S → D is blocked
+        allow_one_way = ("Fire Station", "D") in self.traffic  #Allow A → G only if S → D is blocked
 
         while priority_queue:
             cost, node, path = heapq.heappop(priority_queue)
